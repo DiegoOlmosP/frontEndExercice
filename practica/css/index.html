@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS exercise</title>
+  <style>
+    /*
+      --- Exercise 1 ---
+      remove the default styles for the ul list and the <a> links
+    */
+
+     ul, a {
+       margin: 0;
+       text-decoration: none;
+       color: black;
+     }
+     
+    /* --- end exercise 1 --- */
+
+    /*
+      --- Exercise 2 ---
+      remove the default styles for the button and add a radius of 5px and
+      a padding: 10px 10px 10px 10px but with the shortcut.
+
+      Include a hover state to change the color (maybe to a bit darker)
+      Include a linear transition for that hover state 
+    */
+
+     button {
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      border: 0;
+      border-radius: 5px;
+      transition: 1s;
+     }
+     button:hover {
+      background-color: darkslategray;
+     }
+     button:after {
+      background-color: white;
+     }
+
+
+    /* --- end exercise 2 --- */
+
+    /*
+      --- Exercise 3 ---
+      align the red items to the center (horizontal and vertical) of the aqua container
+    */
+    .container {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 60vh;
+      background-color: aqua;
+    }
+    .item {
+      width: 80px;
+      height: 80px;
+      background-color: red;
+      margin: 10px;
+    }
+    /* --- end exercise 3 --- */
+
+    /*
+      --- Exercise 4 ---
+      use a media query for screens bigger than 1200px to fix the width of
+      the main content
+    */
+    /* add media query here */
+
+    @media (min-width:1200px) {
+    .main-content {
+      width: 100%;
+      background-color: antiquewhite;
+	  	justify-content: space-between;
+    }
+  }
+    /* --- end exercise 4 --- */
+    /*
+      --- Exercise 5 ---
+      Based on exercise 3 use a media query to change the display flex to column direction and space-between
+      in mobile resolution < 380px
+    */
+    @media (max-width:380px) {
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: antiquewhite;
+	  	justify-content: space-between;
+    }
+  }
+
+    /* --- end exercise 5 --- */
+  </style>
+</head>
+<body>
+  <main class="main-content">
+    <h2>Exercise 1</h2>
+    <ul>
+      <li><a href="#">Menu link 1</a></li>
+      <li><a href="#">Menu Link 2</a></li>
+      <li><a href="#">Menu link 3</a></li>
+      <li><a href="#">Menu Link 4</a></li>
+    </ul>
+    <hr>
+    <h2>Exercise 2</h2>
+    <button>Save</button>
+    <hr>
+    <h2>Exercise 3</h2>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </main>
+</body>
+</html>
