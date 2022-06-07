@@ -214,7 +214,7 @@ const input = {
 
 // add you solution here
 let map = input.orders.map(item => item.price)
-let s1 = map.reduce(suma);
+let s1 = map.reduce((j, i) => j + i, 0);
 
 function suma(total, num) {
   return total + Math.round(num);
